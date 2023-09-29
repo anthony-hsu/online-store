@@ -59,7 +59,7 @@ body {
 .products-container {
   margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
+  grid-template-columns: repeat(auto-fill, 500px);
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
@@ -68,6 +68,10 @@ body {
 }
 
 .product-card {
-  height: 400px;
-  width: 400px;
+  height: 500px;
+  width: 500px;
+}
+
+.product-image {
+  height: 200px;
 }
