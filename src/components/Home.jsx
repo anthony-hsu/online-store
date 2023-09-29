@@ -1,7 +1,8 @@
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div className="home-container">
+      <div className="block-left"></div>
+      <div className="block-right"></div>
     </div>
   );
 }
