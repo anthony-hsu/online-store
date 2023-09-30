@@ -25,12 +25,16 @@ body {
 }
 
 .navlink-container {
-  flex: 1 0 75%;
+  flex: 1 0 65%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+}
+
+.cart-container {
+  flex: 1 0 10%;
 }
 
 .navlink {

@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Header() {
   return (
@@ -11,6 +12,11 @@ function Header() {
           </NavLink>
           <NavLink className="navlink" to="store">
             Store
+          </NavLink>
+        </div>
+        <div className="cart-container">
+          <NavLink className="navlink" to="cart">
+            <ShoppingCartIcon fontSize="large" />
           </NavLink>
         </div>
       </div>

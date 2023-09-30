@@ -1,14 +1,9 @@
-import { useEffect } from "react";
 import Product from "./Product";
 import PropTypes from "prop-types";
 
 function Store(props) {
-  useEffect(() => {
-    console.log(props.products);
-  }, []);
-
   const showProducts = (product) => {
-    return <Product {...product} />;
+    return <Product {...product} key={product.id}/>;
   };
 
   return (
