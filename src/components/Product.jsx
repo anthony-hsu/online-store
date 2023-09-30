@@ -2,6 +2,7 @@ import { Button, Card, CardContent } from "@mui/material";
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { useCart } from "../contexts/CartContext";
+import { toCurrency } from "../utilities/currency";
 
 function Product(props) {
   //Contexts
@@ -27,7 +28,7 @@ function Product(props) {
         <h1>{title}</h1>
         <img className="product-image" src={image} />
         {/* <p>{description}</p> */}
-        <h4>{price}</h4>
+        <h4>{toCurrency(price)}</h4>
         <label>Quantity: </label>
         <input
           type="number"
