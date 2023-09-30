@@ -17,7 +17,6 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
 }
 
 #navbar-title {
@@ -63,7 +62,7 @@ body {
 .products-container {
   margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 500px);
+  grid-template-columns: repeat(auto-fill, 400px);
   grid-template-rows: 1fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
@@ -73,9 +72,29 @@ body {
 
 .product-card {
   height: 500px;
-  width: 500px;
+  width: 400px;
 }
 
 .product-image {
-  height: 200px;
+  object-position: top;
+  height: 60%;
+}
+
+.product-transactions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-price {
+  flex: 1 0 50%;
+}
+
+.product-add-cart {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

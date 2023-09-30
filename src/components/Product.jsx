@@ -1,8 +1,16 @@
-import { Button, Card, CardContent } from "@mui/material";
-import { useEffect, useState } from "react";
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  IconButton,
+} from "@mui/material";
+import { useState } from "react";
 import PropTypes from "prop-types";
 import { useCart } from "../contexts/CartContext";
 import { toCurrency } from "../utilities/currency";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 
 function Product(props) {
   //Contexts
@@ -10,7 +18,7 @@ function Product(props) {
 
   const [quantity, setQuantity] = useState(0);
 
-  const { id, title, description, price, image } = props;
+  const { id, title, price, image } = props;
 
   const addToCart = () => {
     const _productsInCart = productsInCart;
@@ -22,21 +30,40 @@ function Product(props) {
     setProductsInCart(_productsInCart);
   };
 
+  const incrementQuantity = () => {
+    setQuantity(Number(quantity) + 1);
+  };
+
+  const decrementQuantity = () => {
+    setQuantity(Number(quantity) - 1);
+  };
+
   return (
-    <Card className="product-card">
-      <CardContent>
-        <h1>{title}</h1>
-        <img className="product-image" src={image} />
-        {/* <p>{description}</p> */}
-        <h4>{toCurrency(price)}</h4>
-        <label>Quantity: </label>
-        <input
-          type="number"
-          name="quantity"
-          value={quantity}
-          onChange={(event) => setQuantity(event.target.value)}
-        />
-        <Button onClick={addToCart}>Add To Cart</Button>
+    <Card className="product-card" raised>
+      <CardMedia component="img" image={image} className="product-image" />
+      <CardContent className="product-card-content">
+        <h3 className="product-title">{title}</h3>
+        <div className="product-transactions">
+          <h1 className="product-price">{toCurrency(price)}</h1>
+          <div className="product-add-cart">
+            <div>
+              <IconButton onClick={incrementQuantity}>
+                <AddIcon style={{ color: "green" }} />
+              </IconButton>
+              <input
+                style={{ width: "15%" }}
+                type="number"
+                name="quantity"
+                value={quantity}
+                onChange={(event) => setQuantity(event.target.value)}
+              />
+              <IconButton onClick={decrementQuantity}>
+                <RemoveIcon style={{ color: "red" }} />
+              </IconButton>
+            </div>
+            <Button onClick={addToCart}>Add To Cart</Button>
+          </div>
+        </div>
       </CardContent>
     </Card>
   );
