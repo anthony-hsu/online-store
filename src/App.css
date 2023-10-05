@@ -21,8 +21,11 @@ body {
   z-index: 50;
 }
 
-#navbar-title {
+.navbar-title {
   flex: 1 0 25%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
 }
 
 .navlink-container {
@@ -38,9 +41,21 @@ body {
   flex: 1 0 10%;
 }
 
+.cartlink {
+  text-decoration: none;
+  color: black;
+}
+
 .navlink {
   text-decoration: none;
   color: black;
+  font-size: 1.5rem;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+}
+
+.navlink:hover {
+  border-bottom-color: black;
 }
 
 .home-container {
@@ -50,19 +65,31 @@ body {
 .home-page {
   display: flex;
   flex-direction: row;
-  padding: 0 3rem;
+  padding: 0 7%;
   height: calc(100vh - 5rem);
 }
 
 .block-left {
   flex: 1 0 50%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   height: 100%;
+  gap: 1rem;
+}
+
+.block-left * {
+  margin: 0;
+  font-size: 3.5rem;
 }
 
 .block-right {
   flex: 1 0 50%;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   height: 100%;
 }
 

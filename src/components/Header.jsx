@@ -1,11 +1,13 @@
 import { NavLink, Outlet } from "react-router-dom";
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function Header() {
   return (
     <div>
       <div className="navbar">
-        <h1 id="navbar-title">Shopping Cart</h1>
+        <NavLink className="navbar-title" to="/">
+          <h1>Shopping Cart</h1>
+        </NavLink>
         <div className="navlink-container">
           <NavLink className="navlink" to="/">
             Home
@@ -15,7 +17,7 @@ function Header() {
           </NavLink>
         </div>
         <div className="cart-container">
-          <NavLink className="navlink" to="cart">
+          <NavLink className="cartlink" to="cart">
             <ShoppingCartIcon fontSize="large" />
           </NavLink>
         </div>
