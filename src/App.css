@@ -34,7 +34,7 @@ body {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .cart-container {
@@ -50,12 +50,14 @@ body {
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
-  border-bottom-style: solid;
-  border-bottom-color: white;
+  border-style: solid;
+  border-color: rgba(0,0,0,0);
+  transition: border-color 0.5s linear 0s;
+  padding: 0.5rem;
 }
 
 .navlink:hover {
-  border-bottom-color: black;
+  border-color: rgba(0,0,0,1);
 }
 
 .home-container {
@@ -63,34 +65,53 @@ body {
 }
 
 .home-page {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
   padding: 0 7%;
   height: calc(100vh - 5rem);
 }
 
 .block-left {
-  flex: 1 0 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   height: 100%;
   gap: 1rem;
+  animation: 1s 1 normal slideinleft;
 }
 
-.block-left * {
+.home-title {
   margin: 0;
-  font-size: 3.5rem;
+  font-size: 4rem;
+}
+
+@keyframes slideinleft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .block-right {
-  flex: 1 0 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
+  gap: 2rem;
   height: 100%;
+  animation: 1s 1 normal slideinright;
+}
+
+@keyframes slideinright {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .home-page-1 {
