@@ -10,6 +10,7 @@ body {
 }
 
 .navbar {
+  margin-left: 2rem;
   background-color: white;
   height: 5rem;
   display: flex;
@@ -22,17 +23,18 @@ body {
 }
 
 .navbar-title {
-  flex: 1 0 25%;
+  text-align: left;
+  flex: 1 0 30%;
   text-decoration: none;
   color: black;
   font-size: 1.25rem;
 }
 
 .navlink-container {
-  flex: 1 0 65%;
+  flex: 1 0 60%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
 }
@@ -51,17 +53,16 @@ body {
   color: black;
   font-size: 1.5rem;
   border-style: solid;
-  border-color: rgba(0,0,0,0);
+  border-color: rgba(0, 0, 0, 0);
   transition: border-color 0.5s linear 0s;
   padding: 0.5rem;
 }
 
 .navlink:hover {
-  border-color: rgba(0,0,0,1);
+  border-color: rgba(0, 0, 0, 1);
 }
 
 .home-container {
-
 }
 
 .home-page {
@@ -125,11 +126,9 @@ body {
 }
 
 .home-page-1 {
-
 }
 
 .home-page-2 {
-
 }
 
 .home-img {
@@ -229,4 +228,62 @@ body {
 .cart-summary-container {
   margin: 2rem;
   height: calc(100vh - 9rem);
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    margin-left: 1rem;
+  }
+  .navbar-title {
+    flex: 1 0 45%;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+  .navlink-container {
+    flex: 1 0 45%;
+    gap: 0;
+  }
+  .navlink {
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    transition: border-color 0.5s linear 0s;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    margin-left: 1rem;
+  }
+  .navbar-title {
+    flex: 1 0 50%;
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+  }
+  .navlink-container {
+    flex: 1 0 40%;
+    gap: 0;
+  }
+  .navlink {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    transition: border-color 0.5s linear 0s;
+    padding: 0.5rem;
+  }
+  .products-container {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 450px;
+    gap: 2rem;
+    justify-content: center;
+  }
 }
