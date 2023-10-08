@@ -147,20 +147,28 @@ body {
 }
 
 .product-image {
-  object-position: top;
-  height: 55%;
+  margin: 0;
+  padding: 5%;
+  object-fit: contain;
+  height: 50%;
+  max-width: 90%;
 }
 
 .product-card-content {
-  height: 40%;
+  padding: 5%;
+  height: 30%;
   display: grid;
   grid-template-rows: 1fr 1fr;
+}
+
+.product-title {
+  margin: 0;
 }
 
 .product-transactions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  align-items: start;
 }
 
 .product-add-cart {

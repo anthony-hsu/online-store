@@ -1,8 +1,6 @@
 import {
   Button,
   Card,
-  CardContent,
-  CardMedia,
   IconButton,
 } from "@mui/material";
 import { useState } from "react";
@@ -40,8 +38,8 @@ function Product(props) {
 
   return (
     <Card className="product-card" raised>
-      <CardMedia component="img" image={image} className="product-image" />
-      <CardContent className="product-card-content">
+      <img src={image} className="product-image" />
+      <div className="product-card-content">
         <h3 className="product-title">{title}</h3>
         <div className="product-transactions">
           <h1 className="product-price">{toCurrency(price)}</h1>
@@ -64,7 +62,7 @@ function Product(props) {
             <Button onClick={addToCart}>Add To Cart</Button>
           </div>
         </div>
-      </CardContent>
+      </div>
     </Card>
   );
 }
