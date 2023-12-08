@@ -16,7 +16,7 @@ function Header() {
             Store
           </NavLink>
         </div>
-        <div className="cart-container">
+        <div className="cart-nav-container">
           <NavLink className="cartlink" to="cart">
             <ShoppingCartIcon fontSize="large" />
           </NavLink>

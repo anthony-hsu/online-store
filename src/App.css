@@ -39,7 +39,7 @@ body {
   gap: 1rem;
 }
 
-.cart-container {
+.cart-nav-container {
   flex: 1 0 10%;
 }
 
@@ -60,9 +60,6 @@ body {
 
 .navlink:hover {
   border-color: rgba(0, 0, 0, 1);
-}
-
-.home-container {
 }
 
 .home-page {
@@ -219,10 +216,10 @@ body {
 }
 
 .cart-item-data {
-  width: 15%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .cart-item-data * {
@@ -232,6 +229,10 @@ body {
 .cart-summary-container {
   margin: 2rem;
   height: calc(100vh - 9rem);
+}
+
+.cart-summary-container h1 {
+  margin: 4rem 0rem;
 }
 
 @media (max-width: 1000px) {
