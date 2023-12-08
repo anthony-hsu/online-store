@@ -2,6 +2,7 @@ import {
   Button,
   Card,
   IconButton,
+  Input,
 } from "@mui/material";
 import { useState } from "react";
 import PropTypes from "prop-types";
@@ -48,8 +49,8 @@ function Product(props) {
               <IconButton onClick={incrementQuantity}>
                 <AddIcon style={{ color: "green" }} />
               </IconButton>
-              <input
-                style={{ width: "15%" }}
+              <Input
+                className="input-quantity"
                 type="number"
                 name="quantity"
                 value={quantity}

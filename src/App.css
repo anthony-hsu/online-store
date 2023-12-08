@@ -87,6 +87,10 @@ body {
   font-size: 4rem;
 }
 
+.input-quantity {
+  width: 15%;
+}
+
 @keyframes slideinleft {
   from {
     transform: translateX(-100%);

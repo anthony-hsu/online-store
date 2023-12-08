@@ -5,7 +5,7 @@ function Home() {
         <div className="block-left">
           <img
             className="home-img"
-            src="https://elephant.art/wp-content/uploads/2019/11/poop-emoji.jpg"
+            src="images/MoneyEmoji.png"
           />
         </div>
         <div className="block-right">
